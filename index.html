@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yashil Istiqbol</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #0b1f17;
+      color: #ecfdf5;
+      overflow: hidden;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(34,197,94,0.25), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(16,185,129,0.25), transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(132,204,22,0.15), transparent 40%);
+      animation: moveBg 20s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes moveBg {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    .slide {
+      display: none;
+      height: 100vh;
+      width: 100vw;
+      padding: 80px;
+    }
+
+    .slide.active {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      animation: slideIn 0.8s ease;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .text h1 { font-size: 64px; margin: 0 0 20px; font-weight: 800; }
+    .text h2 { font-size: 42px; margin: 0 0 16px; font-weight: 700; }
+    .text p, .text li { font-size: 22px; line-height: 1.6; }
+
+    ul { padding-left: 22px; }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(34,197,94,0.15);
+      color: #86efac;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .visual {
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      width: 340px;
+      height: 340px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(34,197,94,0.35), rgba(16,185,129,0.15));
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 110px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .nav {
+      position: fixed;
+      bottom: 24px;
+      right: 32px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<!-- 1 -->
+<section class="slide active">
+  <div class="text">
+    <span class="tag">Образовательная инициатива</span>
+    <h1>Yashil Istiqbol</h1>
+    <p>Проект для молодёжи, который объясняет экономику через экологию и будущее планеты.</p>
+  </div>
+  <div class="visual"><div class="card">🌍</div></div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="text">
+    <span class="tag">Вызов</span>
+    <h2>Проблема</h2>
+    <ul>
+      <li>Экономика кажется абстрактной</li>
+      <li>Экология обсуждается без решений</li>
+      <li>Нет связи между ними</li>
+    </ul>
+  </div>
+  <div class="visual"><div class="card">⚠️</div></div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="text">
+    <span class="tag">Контекст</span>
+    <h2>Почему это важно</h2>
+    <ul>
+      <li>Экономические решения влияют на климат</li>
+      <li>Экология влияет на качество жизни</li>
+      <li>Молодёжь формирует будущее</li>
+    </ul>
+  </div>
+  <div class="visual"><div class="card">📉📈</div></div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="text">
+    <span class="tag">Концепция</span>
+    <h2>Наша идея</h2>
+    <p>Yashil Istiqbol объединяет зелёную экономику и реальные экологические вызовы в одном формате.</p>
+  </div>
+  <div class="visual"><div class="card">💡</div></div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="text">
+    <span class="tag">Контент</span>
+    <h2>Чему мы обучаем</h2>
+    <ul>
+      <li>Основам экономики</li>
+      <li>Устойчивому развитию</li>
+      <li>Экологическому мышлению</li>
+    </ul>
+  </div>
+  <div class="visual"><div class="card">📚</div></div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="text">
+    <span class="tag">Для кого</span>
+    <h2>Целевая аудитория</h2>
+    <ul>
+      <li>Старшеклассники</li>
+      <li>Студенты</li>
+      <li>Будущие лидеры</li>
+    </ul>
+  </div>
+  <div class="visual"><div class="card">👥</div></div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="text">
+    <span class="tag">Формат</span>
+    <h2>Как это работает</h2>
+    <ul>
+      <li>Визуальные объяснения</li>
+      <li>Реальные кейсы</li>
+      <li>Обсуждения</li>
+    </ul>
+  </div>
+  <div class="visual"><div class="card">🧠</div></div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="text">
+    <span class="tag">Результат</span>
+    <h2>Эффект</h2>
+    <ul>
+      <li>Осознанное мышление</li>
+      <li>Экологическая ответственность</li>
+      <li>Активная молодёжь</li>
+    </ul>
+  </div>
+  <div class="visual"><div class="card">🚀</div></div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="text">
+    <span class="tag">Отличие</span>
+    <h2>Почему мы другие</h2>
+    <ul>
+      <li>Экономика и экология вместе</li>
+      <li>Мышление будущего</li>
+      <li>Проект от молодёжи</li>
+    </ul>
+  </div>
+  <div class="visual"><div class="card">✨</div></div>
+</section>
+
+<!-- 10 FINAL -->
+<section class="slide">
+  <div class="text">
+    <span class="tag">Автор</span>
+    <h1>Комронбек</h1>
+    <p style="font-size:26px; margin-top:10px;">VVT assn.</p>
+  </div>
+  <div class="visual"><div class="card">🌱</div></div>
+</section>
+
+<div class="nav">← → для навигации</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let index = 0;
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' && index < slides.length - 1) {
+      slides[index].classList.remove('active');
+      index++;
+      slides[index].classList.add('active');
+    }
+    if (e.key === 'ArrowLeft' && index > 0) {
+      slides[index].classList.remove('active');
+      index--;
+      slides[index].classList.add('active');
+    }
+  });
+</script>
+
+</body>
+</html>
